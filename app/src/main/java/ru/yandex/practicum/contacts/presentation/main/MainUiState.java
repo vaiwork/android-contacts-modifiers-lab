@@ -10,8 +10,24 @@ import androidx.annotation.Nullable;
 
 public class MainUiState {
 
-    public boolean searchVisibility = false;
-    public boolean resetSearchButtonVisibility = false;
+    private boolean searchVisibility = false;
+    private boolean resetSearchButtonVisibility = false;
+
+    public boolean getSearchVisibility() {
+        return this.searchVisibility;
+    }
+
+    public boolean getResetSearchButtonVisibility() {
+        return this.resetSearchButtonVisibility;
+    }
+
+    public void setSearchVisibility(boolean searchVisibilityStatus) {
+        this.searchVisibility = searchVisibilityStatus;
+    }
+
+    public void setResetSearchButtonVisibility(boolean resetSearchButtonVisibilityStatus) {
+        this.resetSearchButtonVisibility = resetSearchButtonVisibilityStatus;
+    }
 
     public Actions actions = new Actions();
     public MenuBadges menuBadges = new MenuBadges();
